@@ -1,0 +1,30 @@
+void login(){
+    int count;
+    string userID, password, id, pass;
+    system("cls");
+    cout<<"Pleas enter the username and Password: "<<endl;
+    cout<<"\t\t\t USERNAME ";
+    cin>>userID;
+    cout<<"\t\t\t PASSWORD: ";
+    cin>>password;
+
+    //check if username and password is already present in records.
+
+    ifstream input("records.txt");
+    while(input>>id>>pass){
+        if(id==userID && pass==password){
+            count=1;
+            system("cls");
+        }
+    }
+    input.close();
+
+    if(count==1){
+        cout<<userID<<"\n LOGIN IS SUCCESSFUL!! \n Thank you! \n";
+        main();
+    }
+    else{
+        cout<<"\n !! LOGIN ERROR !! \n Please check your username and password! \n";
+        main();
+    }
+}
