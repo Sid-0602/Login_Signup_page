@@ -73,7 +73,7 @@ void login()
 
     if (count == 1)
     {
-        cout << userID << "\n LOGIN IS SUCCESSFUL!! \n Thank you! \n";
+        cout << userID << "\n LOGIN IS SUCCESSFUL!! \n THANK YOU! \n";
         main();
     }
     else
